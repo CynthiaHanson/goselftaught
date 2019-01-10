@@ -13,7 +13,4 @@ class Scraper:
         sp = BeautifulSoup(html, parser)
         for tag in sp.find_all("a"):
             url = tag.get("href")
-            if url is None:
-                continue
-            if "html" in url:
-                print("\n" + url)
+            print("\n" + url)
